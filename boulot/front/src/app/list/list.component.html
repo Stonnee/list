@@ -1,0 +1,19 @@
+<div class="box">
+
+  <h1>Ma liste de course</h1>
+
+  <div class="play_ground"><!-- [ngClass]="{'btn btn-primary': isPut == false, 'btn btn-default': isPut === true}" -->
+
+  <li *ngFor="let stuff of req; let i = index">
+    <h3><button id="btnP" class="btn btn-primary" (click)="put(stuff._id)">
+    <img width="20px" src="https://img.icons8.com/metro/26/000000/settings.png"/></button>&nbsp;
+      <button id="btnT" class="btn btn-danger" (click)="suppr(stuff._id)">
+    <img width="20px" src="https://img.icons8.com/material-sharp/26/000000/trash.png"/></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;{{ stuff.nb }} &nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp; {{ stuff.title }}</h3>
+  </li>
+
+
+
+  </div>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bowlby+One" />
+</div>
